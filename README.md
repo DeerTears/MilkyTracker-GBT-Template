@@ -1,6 +1,6 @@
 # What is this?
 
-This is a .xm file that should be used as a template in Milkytracker for those who are making .mod files to be used in GBT Player. I'm going to be mentioning GBT Player's name a lot, if you're a GB Studio user then you should know that GB Studio relies on GBT Player for music playback.
+This is a .xm file that should be used as a template in Milkytracker for those who are making .mod files to be used in GBT Player. If you're a GB Studio user then you should know that GB Studio relies on GBT Player for music playback.
 
 # Why do I need a template?
 
@@ -18,13 +18,13 @@ In channels 1 and 2 I put effect C00 on the first row to silence these two track
 
 I also added F07 to channel 4 because it's the only channel that can set the song's tempo silently on the first row. 99% of songs will want to put effect F on channel 4 to start the song. Project settings aren't read by GBT Player at all, so just use F to set your song's speed instead of adjusting it on Milkytracker's interface. You can still set effect F on channels 1 or 2 later on in the song.
 
-+I have sometimes noticed things like volume data not getting carried over when going from .mod to .xm to .mod but this hasn't happened for a while and I don't know what caused this originally. New file .xm to .mod carries over volume data perfectly. I need to test this more to know for sure.
+``+I have sometimes noticed things like volume data not getting carried over when going from .mod to .xm to .mod but this hasn't happened for a while and I don't know what caused this originally. New file .xm to .mod carries over volume data perfectly. I need to test this more to know for sure.``
 
 ## Some tempo stuff to know
 
-Tempo is only used to emulate refresh rates and won't be read by GBT Player, so leave it at 130 BPM if you're using GB Studio 1.1.0 or no changes to its music playback have been made since 1.1.0.
+Tempo is only used to emulate refresh rates and won't be read by GBT Player, so leave it at 130 BPM if you're using GB Studio 1.1.0 or any later versions that haven't changed anything about music playback.
 
-If your in-game speed differs too greatly from your tracker and you want to emulate the in-game speed better, adjust your project tempo to better match what you're hearing in-game. Songs with F04 or faster (F01 is the fastest) will sound more accurate in the tracker with a project tempo of 150 BPM to emulate the 50hz screen of the Gameboy. I can't fully explain why 150 BPM is the magic number, but this shouldn't matter so much as long as you test your song often enough.
+If your in-game speed differs too greatly from your tracker and you want to emulate the in-game speed better, adjust your project tempo to better match what you're hearing in-game. Songs with F04 or faster (F01 is the fastest) will sound more accurate in the tracker with a project tempo of 150 BPM to emulate the 50hz screen of the Gameboy. I can't fully explain why 150 BPM is the magic number, but this shouldn't matter so much as long as you test your song and you know what the player will be hearing. If you're a rare OpenMPT user following this project file you can use F96 in a different channel to set project tempo to 150 BPM for speeds F04 and faster, otherwise this isn't needed.
 
 ## Some volume Stuff to know
 
@@ -49,4 +49,4 @@ MelonadeM for being an all-knowing GBT guide
 richardLULZ for assisting with music docs and code review
 chris for making GB Studio
 GB Studio community for being awesome!
-and AntonioND for making GBT Player
+and especially AntonioND for making GBT Player
