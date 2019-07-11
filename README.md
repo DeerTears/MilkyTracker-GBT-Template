@@ -1,12 +1,12 @@
-# What is this?
+## What is this?
 
-This is a .xm file that should be used as a template in Milkytracker for those who are making .mod files to be used in GBT Player. If you're a GB Studio user then you should know that GB Studio relies on GBT Player for music playback.
+It's a template for MilkyTracker. This .xm file that should be used as a template for making .mod files to be used in GBT Player through GB Studio 1.1.0. GB Studio users should know that GB Studio relies on GBT Player for music playback.
 
-# What's the template for?
+## What's the template for?
 
 GBT Player does not read custom sampledata from the .mod file you're making. GBT Player has a bunch of pre-baked instruments to be called upon, so you're just writing the note, instrument # and effect data with the .mod format. This .xm file contains instruments that are essentially examples of what you will hear when your .mod file is played back with GBT Player.
 
-# How is this different from the existing template.mod?
+## How is this different from the existing template.mod?
 
 Normally composers can load template.mod that's included with GBT Player and all of GB Studio's new projects so they have access to all of these example instruments, but if you're a Milkytracker user like me you'll soon discover that Milkytracker corrupts .mod files if the save button is pressed Milkytracker. A corrupted .mod sounds like fast, high-pitched squeaks followed by silence when played by GBT Player.
 
@@ -18,19 +18,19 @@ Saving an .xm file is safe, pressing "save as" to .mod is safe (that's how you e
 
 ## Differences from template.mod
 
-1. C00 on channels 1 and 2
+1. **C00 on channels 1 and 2**
 
-  In channels 1 and 2 I put effect C00 on the first row to silence these two tracks. Otherwise these channels play a default note on their own if their volume isn't controlled on the first row of the song. The C00 effect can be changed to any other effect if you're intending to play a note on that row with that channel. Putting a non-volume effect like E8x or Fxx will make that channel start at max volume.
+In channels 1 and 2 I put effect C00 on the first row to silence these two tracks. Otherwise these channels play a default note on their own if their volume isn't controlled on the first row of the song. The C00 effect can be changed to any other effect if you're intending to play a note on that row with that channel. Putting a non-volume effect like E8x or Fxx will make that channel start at max volume.
 
-2. F07 on channel 4
+2. **F07 on channel 4**
 
-  Channel 4 is the only channel that can set the song's tempo silently on the first row. 99% of songs will want to put effect F on channel 4 to start the song. Project settings aren't read by GBT Player at all, so just use F to set your song's speed instead of adjusting it on Milkytracker's interface. You can still set effect F on channels 1 or 2 later on in the song.
+Channel 4 is the only channel that can set the song's tempo silently on the first row. 99% of songs will want to put effect F on channel 4 to start the song. Project settings aren't read by GBT Player at all, so just use F to set your song's speed instead of adjusting it on Milkytracker's interface. You can still set effect F on channels 1 or 2 later on in the song.
 
-3. No song data
+3. **No song data**
 
 I got so used to wiping the song data for template.mod I didn't pick up on other important aspects of the file, so I decided to create a new template that starts with ideal settings for use in GBT Player. The tempo setting is setup for songs that are F05 or slower and are to be used in GB Studio 1.1.0 (or future versions if -speed has not been added to it)
 
-4. The Project Tempo of 130 BPM
+4. **Project Tempo at 130 BPM**
 
 When project tempo (or song BPM) is used alongside a speed effect (F1F or faster) MilkyTracker then uses the project tempo to emulate refresh rates. This data won't be read by GBT Player.
 
@@ -41,12 +41,12 @@ The project tempo can be adjusted to your liking and it will only impact how fas
 ## Tips on In-Game Volume Playback
 
 GBT Player always pulls from the last volume effect that you set for the channel. Example:
-``__Channel 1__
+```__Channel 1__
 C5 01 -- C40
 -- -- -- C00
 C5 01 -- ---
 -- -- -- C00
-``
+```
 This will only play 1 note in-game, even though MilkyTracker (and others) will play 2 notes.
 
 Channels 1 and 2 will only make volume changes in steps of 4
